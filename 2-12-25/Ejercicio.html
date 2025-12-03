@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            text-align: center;
+            width: 50%;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="a">A [Enviado de 1]</div>
+    <div id="b">B [Enviado de 2]</div>
+    <div id="c">C [Enviado de 5]</div>
+    <div id="d">D [Enviado de 5]</div>
+    <div id="e">E [Enviado de 6]</div>
+    <div id="f">F [Enviado de 3]</div>
+    <div id="g">G [Enviado de 7]</div>
+</body>
+<script>
+    const primeraCaja = document.getElementById("a");
+    setTimeout((primeraCaja) =>{
+    console.log("3. La arepa esta lista (2 seg despues)")
+}, 5000);
+</script>
+</html>
