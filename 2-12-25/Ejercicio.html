@@ -14,18 +14,51 @@
     </style>
 </head>
 <body>
-    <div id="a">A [Enviado de 1]</div>
-    <div id="b">B [Enviado de 2]</div>
-    <div id="c">C [Enviado de 5]</div>
-    <div id="d">D [Enviado de 5]</div>
-    <div id="e">E [Enviado de 6]</div>
-    <div id="f">F [Enviado de 3]</div>
-    <div id="g">G [Enviado de 7]</div>
+    <div id="a" style="display: none;">A [Enviado de 1]</div>
+    <div id="b" style="display: none;">B [Enviado de 2]</div>
+    <div id="c" style="display: none;">C [Enviado de 5]</div>
+    <div id="d" style="display: none;">D [Enviado de 5]</div>
+    <div id="e" style="display: none;">E [Enviado de 6]</div>
+    <div id="f" style="display: none;">F [Enviado de 3]</div>
+    <div id="g" style="display: none;">G [Enviado de 7]</div>
+    <div id="h" style="display: none;">H</div>
 </body>
 <script>
-    const primeraCaja = document.getElementById("a");
-    setTimeout((primeraCaja) =>{
-    console.log("3. La arepa esta lista (2 seg despues)")
-}, 5000);
+    function show(id) {
+        document.getElementById(id).style.display = 'block';
+    }
+
+    window.onload = function() {
+        // A aparece cuando se carga la ventana
+        show('a');
+
+        // B aparece inmediatamente después de A
+        show('b');
+
+        // C aparece 5 segundos después de A
+        setTimeout(() => show('c'), 5000);
+
+        // D aparece aleatoriamente entre 2 y 5 segundos después de cargar la ventana
+        const randomDelay = Math.random() * 3000 + 2000; // 2000-5000 ms
+        setTimeout(() => {
+            show('d');
+
+            // E aparece 2 segundos después de D
+            setTimeout(() => {
+                show('e');
+
+                // G aparece 2 segundos después de E
+                setTimeout(() => {
+                    show('g');
+
+                    // H aparece 3 segundos después de G
+                    setTimeout(() => show('h'), 3000);
+                }, 2000);
+            }, 2000);
+        }, randomDelay);
+
+        // F aparece 7 segundos después de B
+        setTimeout(() => show('f'), 7000);
+    };
 </script>
 </html>
