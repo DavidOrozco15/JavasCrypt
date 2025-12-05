@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ordenar Nombres</h1>
+    <hr>
+
+    <form onsubmit="return false">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <button onclick="agregar()">Ordenar y Agregar</button>
+        <br><br>
+        <hr>
+        <textarea name="txtnombres" id="txtnombres" cols="30" rows="10" placeholder="Nombres Ordenados"></textarea>
+        <button onclick="limpiar()">Limpiar</button>
+    </form>
+
+    <script src="ordenar-nombres.js"></script>
+</body>
+</html>
