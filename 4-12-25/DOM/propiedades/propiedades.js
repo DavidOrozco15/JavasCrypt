@@ -11,3 +11,19 @@ console.log("Segunda clase del div: ", miDiv.classList.item(1));
 
 // 4. classlist.contains - verifica si una clase esta en una lista de clases
 console.log("Esta la clase 'clase 3' en el Div?: ", miDiv.classList.contains("clase 3"));
+
+// classList.add
+
+miDiv.classList.add("clase3");
+
+// classlist.remove
+miDiv.classList.remove("clase2", "clase1");
+
+//classlist.toggle
+function toggleClass(){
+    miDiv.classList.toggle("clase4");
+    console.log(miDiv.classList);
+}
+
+// classList.replace(old, new)
+miDiv.classList.replace("clase3", "clase5");
