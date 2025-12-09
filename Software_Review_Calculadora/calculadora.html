@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Conversor de Temperaturas</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+    }
+
+    .contenedor {
+        background: white;
+        padding: 25px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 12px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 15px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .btn-secundario {
+        background-color: #2196f3;
+    }
+    .btn-secundario:hover {
+        background-color: #1976d2;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h2>Conversor de Temperaturas</h2>
+
+    <label>Grados Centígrados:</label>
+    <input type="number" id="inputCentigrados" placeholder="Ej: 30">
+
+    <label>Grados Fahrenheit:</label>
+    <input type="number" id="inputFahrenheit" placeholder="Ej: 86">
+
+    <button onclick="convertirACelsius()">Convertir °F a °C</button>
+    <button class="btn-secundario" onclick="convertirAFahrenheit()">Convertir °C a °F</button>
+
+</div>
+
+<script src="calculadora.js"></script>
+
+</body>
+</html>
